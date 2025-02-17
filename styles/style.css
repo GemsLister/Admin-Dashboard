@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red-orange: #f45d48;
+    --blue-green: #078080;
+    --blue-green-hover: #056868;
+    --pastel-purple: #90a3ef;
+    --online-dot: #04b114;
+    --pastel-pink: #f5d3d4;
+    --semi-white: #f8f5f2;
+    --cards-color: #abd1c6;
+    --headings: #232323;
+    --paragraph-txt: #5f6c7b;
+    --box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 13vw repeat(3, 1fr);
+    grid-template-rows: 19vh repeat(3, 1fr);
+    font-family: "Nunito";
+    background-color: var(--cards-color);
+}
+
+/* Header */
+header{
+    display: flex;
+    grid-column: 2 / 5;
+    background-color: var(--red-orange);
+}
+
+/* Input and Profile Division */
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.search-bar svg{
+    height: 3vh;
+}
+
+.input-profile{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin: 2.6vh 0 0 2vw;    
+    gap: 2vh;
+    width: 50vw;
+}
+
+.search-bar input{
+    border: 0;
+    border-radius: 20px;
+    width: 60%;
+    padding: 1vh;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: var(--semi-white);
+}
+
+.profile h5{
+    font-size: 1rem;
+}
+
+.profile h3{
+    font-size: 1.5rem;
+}
+
+.profile img{
+    border-radius: 50%;
+    background-color: var(--blue-green);
+    padding: 0.8rem;
+    height: 4.8rem;
+    width: 4.8rem;
+}
+/* Input and Profile Division(End) */
+
+/* Profile and Buttons Division */
+.profile-buttons{
+    padding: 1vh;
+    width: 33vw;
+}
+
+.profile-buttons article:first-child{
+    display: flex;
+    justify-content: end;
+    padding: 2vh 1.5vw 0 0;
+    align-items: center;
+    gap: 1vw;
+    width: 100%;
+}
+
+.profile-buttons h3{
+    font-size: 1.3rem;
+    color: var(--semi-white);
+}
+
+.profile-buttons svg{
+    height: 3vh;
+}
+
+.profile-buttons img{
+    border-radius: 50%;
+    background-color: var(--blue-green);
+    padding: 0.5rem;
+    height: 6vh;
+}
+
+/* Second Article */
+.profile-buttons article:nth-child(2){
+    padding: 3vh 1.5vw 0 0;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    gap: 2rem;
+}
+
+.profile-buttons article:nth-child(2) button{
+    font-family: "Nunito";
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--semi-white);
+    border: 0;
+    padding: 1vh;
+    width: 5vw;
+    border-radius: 20px;
+    background-color: var(--blue-green);
+}
+
+.profile-buttons article:nth-child(2) button:hover{
+    background-color: var(--blue-green-hover);
+}
+/* Profile and Buttons Division(End) */
+
+/* Header(End) */
+
+
+/* Sidebar */
+aside{
+    display: grid;
+    grid-template-rows: 13vh repeat(11, 4vh);
+    row-gap: 1rem;
+    grid-row: 1 / 5;
+    background-color: var(--blue-green);
+}
+
+aside section{
+    display: grid;
+    justify-items: start;
+}
+
+aside svg{
+    height: 6vh;
+    margin: 0 0.6vw 0 1.5vw;
+}
+
+/* Dashboard Icon */
+.dashboard-icon{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-icon h3{
+    font-size: 1.3rem;
+    color: var(--semi-white);
+}
+/* Dashboard Icon(End) */
+
+
+/* Sidebar Icons */
+.sidebar-icons{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-icons h3{
+    font-size: 16px;
+    color: var(--semi-white);
+}
+
+.sidebar-icons svg{
+    height: 3.5vh;
+    margin: 0 1vw 0 2vw;
+}
+
+.sidebar-icons:nth-child(8){
+    grid-row: 9;
+}
+
+.sidebar-icons:nth-child(9){
+    grid-row: 10;
+}
+
+.sidebar-icons:nth-child(10){
+    grid-row: 11;
+}
+/* Sidebar-Icons(End) */
+
+/* Sidebar(End) */
+
+
+main{
+    grid-row: 2 / 5;
+    grid-column: 2 / 5;
+    background-color: var(--pastel-light-blue);
+}
+
+/* Cards Section */
+section{
+    padding: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+/* Cards Section(End) */
+
+/* Projects div */
+.projects{
+    height: 70vh;
+    width: 50vw;
+}
+
+.projects h3{
+    font-size: 1.7rem;
+    color: var(--headings);
+}
+
+.projects-cards{
+    height: 100%;
+    margin: 2vh 0 0 0;
+    display: grid;
+    row-gap: 2vw;
+    column-gap: 2vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.projects-cards article{
+    padding: 1rem;
+    gap: 3vh;
+    border-radius: 8px;
+    border-left: 8px solid var(--red-orange);
+    background-color: var(--semi-white);
+    box-shadow: var(--box-shadow);
+}
+
+.projects-cards h3{
+    font-size: 1.5rem;
+    color: var(--headings);
+}
+
+.projects-cards p{
+    color: #5f6c7b;
+}
+/* Projects div(End) */
+
+/* Announcement and Trending div */
+.announcement-trending{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 3vh;
+    width: 18vw;
+}
+
+.announcement-trending p{
+    color: var(--paragraph-txt);
+}
+
+.announcement-card h3,
+.team-card h3{
+    color: var(--headings);
+    font-size: 1.6rem;
+}
+
+.announcement-card article,
+.team-card article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6vh;
+    padding: 1.84vh;
+    height: 84%;
+    background-color: var(--semi-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    border-left: 8px solid var(--blue-green);
+}
+
+.announcement-card article h3{
+    font-size: 1rem;
+}
+
+.announcement-card p{
+    color: var(--paragraph-txt);
+    font-size: 14px;
+}
+
+.team-card article{
+    display: flex;
+    flex-direction: column;
+}
+
+.dream-team{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 0 0 0 0.7vw;
+}
+
+.team-card img{
+    border-radius: 50%;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin: 0 4vw 0 0;
+}
+
+.names-roles{
+    display: flex;
+    align-items: center;
+}
+
+.names-roles img{
+    margin: 0 2vw 0 0;
+}
+
+.names-roles h3{
+    font-size: 1rem;
+}
+
+.names-roles p{
+    font-size: 0.75rem;
+}
+
+.names-roles:first-child img{
+    background-color: var(--red-orange);
+}
+
+.names-roles:nth-child(2) img{
+    background-color: var(--cards-color);
+}
+
+.names-roles:nth-child(3) img{
+    background-color: var(--pastel-purple);
+}
+
+.names-roles:nth-child(4) img{
+    background-color: var(--pastel-pink);
+}
+/* Announcement and Trending div(End) */
